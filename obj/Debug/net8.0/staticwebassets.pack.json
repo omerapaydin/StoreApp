@@ -1,0 +1,109 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/css/main.css",
+      "PackagePath": "staticwebassets/css/main.css"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/1-big.jpeg",
+      "PackagePath": "staticwebassets/img/1-big.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/1.jpeg",
+      "PackagePath": "staticwebassets/img/1.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/1t.jpeg",
+      "PackagePath": "staticwebassets/img/1t.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/2-big.jpeg",
+      "PackagePath": "staticwebassets/img/2-big.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/2.jpeg",
+      "PackagePath": "staticwebassets/img/2.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/2024-yilinda-apple.jpg",
+      "PackagePath": "staticwebassets/img/2024-yilinda-apple.jpg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/2t.jpeg",
+      "PackagePath": "staticwebassets/img/2t.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/3-big.jpeg",
+      "PackagePath": "staticwebassets/img/3-big.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/3.jpeg",
+      "PackagePath": "staticwebassets/img/3.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/3t.jpeg",
+      "PackagePath": "staticwebassets/img/3t.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/4.jpeg",
+      "PackagePath": "staticwebassets/img/4.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/5.jpeg",
+      "PackagePath": "staticwebassets/img/5.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/6.jpeg",
+      "PackagePath": "staticwebassets/img/6.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/7.jpeg",
+      "PackagePath": "staticwebassets/img/7.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/8.jpeg",
+      "PackagePath": "staticwebassets/img/8.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/apple-urunleri.jpg",
+      "PackagePath": "staticwebassets/img/apple-urunleri.jpg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/apple.jpeg",
+      "PackagePath": "staticwebassets/img/apple.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/slider-1.jpeg",
+      "PackagePath": "staticwebassets/img/slider-1.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/slider-2.jpeg",
+      "PackagePath": "staticwebassets/img/slider-2.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/slider-3.jpeg",
+      "PackagePath": "staticwebassets/img/slider-3.jpeg"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.StoreApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.StoreApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.StoreApp.props",
+      "PackagePath": "build\\StoreApp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.StoreApp.props",
+      "PackagePath": "buildMultiTargeting\\StoreApp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.StoreApp.props",
+      "PackagePath": "buildTransitive\\StoreApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

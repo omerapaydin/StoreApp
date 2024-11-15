@@ -1,0 +1,93 @@
+@model ProductListViewModel
+ 
+  <section class="pt-3 slider main_list">
+      <div class="container">
+        <div class="row p-lg-2 p-1">
+          <aside class="d-none d-lg-block col-lg-3">
+            <nav
+              class="nav nav-pills nav_cat flex-column flex-nowrap overflow-auto slider__nav"
+            >
+              <a href="index.html" class="nav-link nav_color">Kategoriler</a>
+              <a href="anasayfa.html" class="nav-link">Elektronik</a>
+              <a href="#" class="nav-link">Kozmetik</a>
+              <a href="#" class="nav-link">Spor</a>
+              <a href="#" class="nav-link">Market</a>
+              <a href="#" class="nav-link">Kitap</a>
+              <a href="#" class="nav-link">Oyuncak</a>
+            </nav>
+          </aside>
+       
+          <div class="col-lg-9">
+
+           <div class="d-flex  justify-content-end mb-3">
+          <a asp-controller="Home" asp-action="AddProduct" class="btn btn-warning btn-lg">
+            <i class="fa fa-plus-circle me-2"></i> Yeni Ürün Oluştur
+          </a>
+        </div>
+      
+      @foreach(var user in Model.Products)
+      {
+             <div class="card mb-3 shadow">
+              <div class="row g-0">
+                <div class="col-xl-3 col-md-4">
+                  <a href="/home/details/@user.PostId" class="img-wrap">
+                    <img src="~/img/@user.Image" alt="" />
+                  </a>
+                </div>
+                <div class="col-xl-9 col-md-8 border-start">
+                  <div class="card-body">
+                    <a href="/home/details/@user.PostId" class="h6 mb-3 title">
+                      @user.Title @user.Description
+                    </a>
+                    <div class="mb-2">
+                      <div class="rating mb-2">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="text-warning ms-1">5.0</span>
+                      </div>
+                     <span class="text-muted">
+                      @(@user.IsActive ? "Stokta" : "Stokta Değil")
+                      </span>
+                      <span class="text-success">Ücretsiz Kargo</span>
+                    </div>
+
+                    <div class="price-wrap mb-4">
+                      <strong class="price">@user.Price TL</strong>
+                    </div>
+
+                    <div class="d-grid ga-2 d-md-block">
+                      <a href="detay.html" class="btn btn-warning">
+                        <i class="fa fa-shopping-cart me-1"></i> Sepete Ekle
+                      </a>
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      }
+
+           
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+@section search {
+    <form asp-controller="Home" asp-action="List" method="post" class="form-inline my-2 my-lg-0">
+        <input
+            name="search"
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Anahtar Kelime"
+            aria-label="Ara"
+        />
+        <button class="btn btn-warning my-2 my-sm-0" type="submit">
+            <i class="fas fa-search"></i>
+        </button>
+    </form>
+}

@@ -1,0 +1,13 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using StoreApp.Entity;
+
+namespace StoreApp.ViewModel
+{
+    public class ProductListViewModel
+    {
+        public List<Post>? Products { get; set; }
+    }
+}
