@@ -276,3 +276,4 @@
 /Users/omerapaydin/Desktop/Back-end/net8.0/E-Ticaret/StoreApp/obj/Debug/net8.0/StoreApp.pdb
 /Users/omerapaydin/Desktop/Back-end/net8.0/E-Ticaret/StoreApp/obj/Debug/net8.0/StoreApp.genruntimeconfig.cache
 /Users/omerapaydin/Desktop/Back-end/net8.0/E-Ticaret/StoreApp/obj/Debug/net8.0/ref/StoreApp.dll
+/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/obj/Debug/net8.0/StoreApp.sourcelink.json

@@ -1,0 +1,10 @@
+@model List<Category>
+
+ <nav class="nav nav-pills nav_cat flex-column flex-nowrap overflow-auto slider__nav">
+              <a asp-controller="Home" asp-action="List" class="nav-link nav_color">Kategoriler</a>
+            
+          @foreach(var ctg in Model)
+            {
+              <a asp-controller="Home" asp-action="List" asp-route-id="@ctg.CategoryId" class="nav-link ">@ctg.Name</a>
+            }
+</nav>

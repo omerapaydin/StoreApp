@@ -17,20 +17,29 @@ namespace StoreApp.Controllers
     {
 
         private IPostRepository _postRepository;
+        private ICategoryRepository _categoryRepository;
+         
         private UserManager<ApplicationUser> _userManager;
-        public HomeController(IPostRepository postRepository,UserManager<ApplicationUser> userManager)
+        public HomeController(IPostRepository postRepository,UserManager<ApplicationUser> userManager,ICategoryRepository categoryRepository)
         {
             _postRepository = postRepository;
             _userManager = userManager;
+            _categoryRepository = categoryRepository;
         }
 
         public IActionResult Index()
         {
-            return View();
+            return View(_categoryRepository.Categories.ToList());
         }
-        public IActionResult List(string search)
+        public IActionResult List(string search,int? id)
         {
             var products = _postRepository.Posts;
+             var categories = _categoryRepository.Categories;
+
+             if (id != null)
+            {
+               products = products.Where(p => p.CategoryId == id);
+            }
 
             if (!string.IsNullOrEmpty(search))
             {
@@ -39,8 +48,10 @@ namespace StoreApp.Controllers
 
             var viewModel = new ProductListViewModel
             {
-                Products = products.ToList()            
-                };
+                Products = products.ToList(),
+                Categories = categories.ToList()
+                
+            };
 
             return View(viewModel);
         }

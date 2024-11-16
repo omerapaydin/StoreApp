@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using StoreApp.Data.Abstract;
+using StoreApp.Data.Concrete;
 using StoreApp.Data.Concrete.EfCore;
 using StoreApp.Entity;
 using StoreApp.Models;
@@ -29,6 +30,7 @@ builder.Services.Configure<IdentityOptions>( options =>{
 );
 
 builder.Services.AddScoped<IPostRepository,EfPostRepository>();
+builder.Services.AddScoped<ICategoryRepository,EfCategoryRepository>();
 
 builder.Services.ConfigureApplicationCookie(options =>{
     options.LoginPath = "/Account/Login"; 

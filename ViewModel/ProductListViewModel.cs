@@ -9,5 +9,6 @@ namespace StoreApp.ViewModel
     public class ProductListViewModel
     {
         public List<Post>? Products { get; set; }
+        public List<Category>? Categories { get; set; }
     }
 }

@@ -4,17 +4,14 @@
       <div class="container">
         <div class="row p-lg-2 p-1">
           <aside class="d-none d-lg-block col-lg-3">
-            <nav
-              class="nav nav-pills nav_cat flex-column flex-nowrap overflow-auto slider__nav"
-            >
-              <a href="index.html" class="nav-link nav_color">Kategoriler</a>
-              <a href="anasayfa.html" class="nav-link">Elektronik</a>
-              <a href="#" class="nav-link">Kozmetik</a>
-              <a href="#" class="nav-link">Spor</a>
-              <a href="#" class="nav-link">Market</a>
-              <a href="#" class="nav-link">Kitap</a>
-              <a href="#" class="nav-link">Oyuncak</a>
-            </nav>
+           <nav class="nav nav-pills nav_cat flex-column flex-nowrap overflow-auto slider__nav">
+              <a asp-controller="Home" asp-action="List" class="nav-link nav_color">Kategoriler</a>
+                @foreach(var ctg in Model.Categories)
+                {
+                  <a asp-controller="Home" asp-action="List" asp-route-id="@ctg.CategoryId" class="nav-link ">@ctg.Name</a>
+                }
+           </nav>
+
           </aside>
        
           <div class="col-lg-9">

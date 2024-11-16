@@ -17,6 +17,8 @@ namespace StoreApp.Models
         }
 
         public DbSet<Post> Posts { get; set; }
+          public DbSet<Category> Categories { get; set; } 
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -26,9 +28,17 @@ namespace StoreApp.Models
 
             
             builder.Entity<Post>()
-                .HasOne(p => p.User)         // Her post bir kullanıcıya aittir
-                .WithMany(u => u.Posts)      // Bir kullanıcının birden fazla postu olabilir
-                .HasForeignKey(p => p.UserId);  // Foreign key olarak UserId kullanılır
+                .HasOne(p => p.User)         
+                .WithMany(u => u.Posts)      
+                .HasForeignKey(p => p.UserId); 
+
+
+                builder.Entity<Post>()
+                .HasOne(p => p.Category)       
+                .WithMany(c => c.Posts)     
+                .HasForeignKey(p => p.CategoryId); 
+
+
 
         }
 
