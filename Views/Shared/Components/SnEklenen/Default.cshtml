@@ -1,0 +1,23 @@
+@model List<Post>
+
+
+        @foreach(var pst in Model)
+        {
+            <div class="card_color col-lg-3 col-md-4 col-sm-6">
+                <figure class="card shadow">
+                <a href="" class="img-wrap">
+                    <img src="~/img/@pst.Image" alt="" />
+                </a>
+
+                <figcaption class="info-wrap border-top">
+                    <a href="/home/details/@pst.PostId" class="title text-truncate">
+                     @pst.Title @pst.Description
+                    </a>
+                    <div class="price-wrap">
+                    <span class="price">@pst.Price TL</span>
+                    
+                    </div>
+                </figcaption>
+                </figure>
+            </div>
+        }

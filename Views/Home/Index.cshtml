@@ -6,7 +6,7 @@
             <aside class="d-none d-lg-block col-lg-3">
             
                <nav class="nav nav-pills nav_cat flex-column flex-nowrap overflow-auto slider__nav">
-              <a asp-controller="Home" asp-action="List" class="nav-link nav_color">Kategoriler</a>
+              <a asp-controller="Home" asp-action="List" class="nav-link nav_color">Tüm Kategoriler</a>
                 @foreach(var ctg in Model)
                 {
                   <a asp-controller="Home" asp-action="List" asp-route-id="@ctg.CategoryId" class="nav-link ">@ctg.Name</a>
@@ -92,3 +92,20 @@
       </div>
     </section>
 
+@section Scripts {
+    <section class="pt-3">
+      <div class="container">
+        <header>
+          <h3 class="son_ek mb-md-3 mb-0">Son Eklenenler</h3>
+        </header>
+        <div class="row">
+            <vc:sn-eklenen /> 
+       </div>
+      </div>
+    </section>
+}
+
+
+
+
+ 

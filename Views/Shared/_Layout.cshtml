@@ -117,7 +117,12 @@
         </div>
     </div>
 
+      @RenderSection("Scripts", required: false)
 
+    <footer style="width:100%; background-color: #3d204c !important;
+    bottom: 0; " class="py-4 bg-primary footer_">
+      <partial name="_Footer">
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
