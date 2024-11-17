@@ -16,8 +16,8 @@ namespace StoreApp.Entity
         public bool IsActive { get; set; }
         public string UserId { get; set; }
         public ApplicationUser User { get; set; }
-        public int CategoryId { get; set; }  // Foreign Key
-        public Category Category { get; set; } 
+        public int? CategoryId { get; set; } 
+        public Category Category { get; set; }
 
     }
 }

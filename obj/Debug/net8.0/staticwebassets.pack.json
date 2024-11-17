@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/css/main.css"
     },
     {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/09a9748e-1b04-42ad-92ff-df47ef54cfb8.jpeg",
+      "PackagePath": "staticwebassets/img/09a9748e-1b04-42ad-92ff-df47ef54cfb8.jpeg"
+    },
+    {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/1-big.jpeg",
       "PackagePath": "staticwebassets/img/1-big.jpeg"
     },
@@ -61,8 +65,20 @@
       "PackagePath": "staticwebassets/img/7.jpeg"
     },
     {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/721002c7-88be-435f-a157-5a7391889ab4.jpg",
+      "PackagePath": "staticwebassets/img/721002c7-88be-435f-a157-5a7391889ab4.jpg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/783afcea-3474-4afd-9713-c19b6cc788ac.jpeg",
+      "PackagePath": "staticwebassets/img/783afcea-3474-4afd-9713-c19b6cc788ac.jpeg"
+    },
+    {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/8.jpeg",
       "PackagePath": "staticwebassets/img/8.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/a.jpg",
+      "PackagePath": "staticwebassets/img/a.jpg"
     },
     {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/apple-urunleri.jpg",
@@ -71,6 +87,22 @@
     {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/apple.jpeg",
       "PackagePath": "staticwebassets/img/apple.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/d6c07c72-22d3-468b-a32f-683659a5069a.jpeg",
+      "PackagePath": "staticwebassets/img/d6c07c72-22d3-468b-a32f-683659a5069a.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/e3e50bb2-6911-4690-9848-894cf8de9caa.jpg",
+      "PackagePath": "staticwebassets/img/e3e50bb2-6911-4690-9848-894cf8de9caa.jpg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/e5657632-80ce-46c2-9cc4-2e5089e06ee8.jpeg",
+      "PackagePath": "staticwebassets/img/e5657632-80ce-46c2-9cc4-2e5089e06ee8.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/macs.jpg",
+      "PackagePath": "staticwebassets/img/macs.jpg"
     },
     {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/slider-1.jpeg",

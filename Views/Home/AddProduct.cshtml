@@ -36,7 +36,13 @@
           <input asp-for="Price" class="form-control" />
           <span asp-validation-for="Price" class="text-danger"></span>
         </div>
-        <button class="btn btn-warning" type="submit">SignUp</button>
+        <div class="form-group">
+          <label for="CategoryId">Kategori</label>
+          <select asp-for="CategoryId" asp-items="@ViewBag.Categories" class="form-control">
+              <option selected disabled>Tüm Kategoriler</option>
+          </select>
+        </div>
+            <button class="btn btn-warning" type="submit">Save</button>
       </div>
     </form>
   </div>

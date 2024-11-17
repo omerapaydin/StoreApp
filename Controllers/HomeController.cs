@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using StoreApp.Data.Abstract;
 using StoreApp.Entity;
@@ -31,16 +32,18 @@ namespace StoreApp.Controllers
         {
             return View(_categoryRepository.Categories.ToList());
         }
-        public IActionResult List(string search,int? id)
+       public IActionResult List(string search, int? id)
         {
             var products = _postRepository.Posts;
-             var categories = _categoryRepository.Categories;
+            var categories = _categoryRepository.Categories;
 
-             if (id != null)
+           
+            if (id != null)
             {
-               products = products.Where(p => p.CategoryId == id);
+                products = products.Where(p => p.CategoryId == id);
             }
 
+          
             if (!string.IsNullOrEmpty(search))
             {
                 products = products.Where(p => p.Description.ToLower().Contains(search.ToLower()));
@@ -50,7 +53,6 @@ namespace StoreApp.Controllers
             {
                 Products = products.ToList(),
                 Categories = categories.ToList()
-                
             };
 
             return View(viewModel);
@@ -64,6 +66,7 @@ namespace StoreApp.Controllers
          [Authorize]
            public IActionResult AddProduct()
         {
+             ViewBag.Categories = new SelectList(_categoryRepository.Categories, "CategoryId", "Name");
             return View();
         }
 
@@ -72,6 +75,8 @@ namespace StoreApp.Controllers
 
            public async Task<IActionResult> AddProduct(AddPostViewModel model , IFormFile imageFile)
         {
+
+           
              var extension = "";
 
             if (imageFile != null)
@@ -106,18 +111,23 @@ namespace StoreApp.Controllers
             {
                 // Kullanıcı giriş yapmış
                 var userId = _userManager.GetUserId(User);
-                
-                var product = new AddPostViewModel {
+               
+               
+               var post = new Post
+                    {
                         Title = model.Title,
                         Description = model.Description,
                         Price = model.Price,
                         Image = randomFileName,
                         PublishedOn = DateTime.Now,
-                        UserId = userId
+                        UserId = userId,
+                        CategoryId = model.CategoryId
                     };
 
+                _postRepository.AddPost(post);
 
-                return RedirectToAction("List","Users");
+
+                return RedirectToAction("List","Home");
    
             }
             // else

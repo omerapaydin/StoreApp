@@ -3,9 +3,9 @@
   <section class="pt-3 slider main_list">
       <div class="container">
         <div class="row p-lg-2 p-1">
-          <aside class="d-none d-lg-block col-lg-3">
-           <nav class="nav nav-pills nav_cat flex-column flex-nowrap overflow-auto slider__nav">
-              <a asp-controller="Home" asp-action="List" class="nav-link nav_color">Kategoriler</a>
+         <aside  class="d-none d-lg-block col-lg-3">
+           <nav style="position: sticky; top: 5px; z-index: 1;" class="nav nav-pills nav_cat flex-column flex-nowrap overflow-auto slider__nav">
+             <a asp-controller="Home" asp-action="List" class="nav-link nav_color">Tüm Kategoriler</a>
                 @foreach(var ctg in Model.Categories)
                 {
                   <a asp-controller="Home" asp-action="List" asp-route-id="@ctg.CategoryId" class="nav-link ">@ctg.Name</a>

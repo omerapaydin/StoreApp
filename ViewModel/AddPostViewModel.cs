@@ -14,6 +14,7 @@ namespace StoreApp.ViewModel
         public string? Price { get; set; }
         public DateTime PublishedOn { get; set; }
        public string? UserId { get; set; }
+       public int CategoryId { get; set; }
   
 
         
