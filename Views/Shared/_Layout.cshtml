@@ -12,6 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StoreApp</title>
     <link rel="stylesheet" href="/css/main.css">
+
+          @RenderSection("Css", required: false)
+
       
       <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
@@ -81,10 +84,9 @@
 
         @if(User.Identity?.IsAuthenticated==true)
         {
-            <li class="nav-item">
-            <a class="nav-link" href=""
-              ><i class="fas fa-user"></i> Merhaba @User.Identity.Name</a>
-          </li>
+          <a class="nav-link" asp-controller="Account" asp-action="Profile">
+              <i class="fas fa-user"></i> Merhaba @User.Identity.Name
+          </a>
              <li class="nav-item">
             <a class="nav-link" href="#"
               ><i class="fas fa-shopping-cart"></i> Sepetim</a>

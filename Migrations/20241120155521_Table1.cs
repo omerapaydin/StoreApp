@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace StoreApp.Migrations
 {
     /// <inheritdoc />
-    public partial class New2 : Migration
+    public partial class Table1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -34,6 +34,7 @@ namespace StoreApp.Migrations
                     Id = table.Column<string>(type: "TEXT", nullable: false),
                     Discriminator = table.Column<string>(type: "TEXT", maxLength: 21, nullable: false),
                     FullName = table.Column<string>(type: "TEXT", nullable: true),
+                    ImageFile = table.Column<string>(type: "TEXT", nullable: true),
                     UserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
@@ -52,6 +53,19 @@ namespace StoreApp.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Categories",
+                columns: table => new
+                {
+                    CategoryId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Categories", x => x.CategoryId);
                 });
 
             migrationBuilder.CreateTable(
@@ -172,7 +186,8 @@ namespace StoreApp.Migrations
                     PublishedOn = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Price = table.Column<string>(type: "TEXT", nullable: true),
                     IsActive = table.Column<bool>(type: "INTEGER", nullable: false),
-                    UserId = table.Column<string>(type: "TEXT", nullable: false)
+                    UserId = table.Column<string>(type: "TEXT", nullable: false),
+                    CategoryId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -183,25 +198,40 @@ namespace StoreApp.Migrations
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Posts_Categories_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "Categories",
+                        principalColumn: "CategoryId");
                 });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
-                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Discriminator", "Email", "EmailConfirmed", "FullName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Discriminator", "Email", "EmailConfirmed", "FullName", "ImageFile", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "1", 0, "f83b517b-bc73-4425-9f96-3f500cbd6d78", "ApplicationUser", "info@gmail.com", true, "Ömer Apaydın", false, null, null, null, "AQAAAAIAAYagAAAAENcy03639NSg8mE+G0LjAlKt1ZoqQwunn6PTlY9hqXDg0FLu+YBtUAfZrNnKfKb3pw==", null, false, "00f3840b-ba15-409a-b427-548109eb61d3", false, "omerapaydin" },
-                    { "2", 0, "647f8d34-91a8-4242-8910-cc009777a75f", "ApplicationUser", "info2@gmail.com", true, "Ahmet Tamboğa", false, null, null, null, "AQAAAAIAAYagAAAAEOtxvNRpQVWwP9E11/cFFMEF1SIZppMuNql42AcVIdCtBwcRvFiOXJgQXYmTp66nSA==", null, false, "f3144a19-f561-41da-a0ed-1f5e00ef8ee8", false, "ahmettambuga" }
+                    { "1", 0, "0da635fb-1c7d-4074-8739-a5d546648637", "ApplicationUser", "info@gmail.com", true, "Ömer Apaydın", "p1.jpg", false, null, null, null, "AQAAAAIAAYagAAAAEC1r579En6MfPIFwRTdyi0lBaxGj1JDVwQRg56+s4oheUNobhQG4suinUpKS/o23KA==", null, false, "c2d68d7d-ea63-49e9-8167-3d501fac9d25", false, "omerapaydin" },
+                    { "2", 0, "0a5a2d16-46d3-4b31-a7d1-0cd83d6be2c8", "ApplicationUser", "info2@gmail.com", true, "Ahmet Tamboğa", "p2.jpg", false, null, null, null, "AQAAAAIAAYagAAAAEMh2/JDMOT+bighn1DnUWbwz2GR1qTKmEZDtVcEPpESOG1cdu9KQN/T6jhPTFVDypQ==", null, false, "1124aed1-a528-4873-b3a3-3cadc19fe20d", false, "ahmettambuga" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Categories",
+                columns: new[] { "CategoryId", "Name" },
+                values: new object[,]
+                {
+                    { 1, "Telefonlar" },
+                    { 2, "Bilgisayarlar" },
+                    { 3, "Aksesuarlar" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Posts",
-                columns: new[] { "PostId", "Description", "Image", "IsActive", "Price", "PublishedOn", "Title", "UserId" },
+                columns: new[] { "PostId", "CategoryId", "Description", "Image", "IsActive", "Price", "PublishedOn", "Title", "UserId" },
                 values: new object[,]
                 {
-                    { 1, "Apple Iphone 12 64GB Sarı Cep Telefonu", "1t.jpeg", true, "45000", new DateTime(2024, 9, 25, 19, 0, 7, 309, DateTimeKind.Local).AddTicks(9080), "Apple", "1" },
-                    { 2, " Apple Iphone 14 128GB Sarı Cep Telefonu", "2t.jpeg", true, "55000", new DateTime(2024, 10, 25, 19, 0, 7, 309, DateTimeKind.Local).AddTicks(9100), "Apple", "1" },
-                    { 3, " Apple Iphone 15 64GB Sarı Cep Telefonu", "3t.jpeg", true, "75000", new DateTime(2024, 9, 15, 19, 0, 7, 309, DateTimeKind.Local).AddTicks(9100), "Apple", "2" }
+                    { 1, 1, "Apple Iphone 12 64GB Sarı Cep Telefonu", "1t.jpeg", true, "45000", new DateTime(2024, 10, 1, 18, 55, 21, 265, DateTimeKind.Local).AddTicks(2150), "Apple", "1" },
+                    { 2, 1, " Apple Iphone 14 128GB Sarı Cep Telefonu", "2t.jpeg", true, "55000", new DateTime(2024, 10, 31, 18, 55, 21, 265, DateTimeKind.Local).AddTicks(2190), "Apple", "1" },
+                    { 3, 1, " Apple Iphone 15 64GB Sarı Cep Telefonu", "3t.jpeg", true, "75000", new DateTime(2024, 9, 21, 18, 55, 21, 265, DateTimeKind.Local).AddTicks(2190), "Apple", "2" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -242,6 +272,11 @@ namespace StoreApp.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Posts_CategoryId",
+                table: "Posts",
+                column: "CategoryId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Posts_UserId",
                 table: "Posts",
                 column: "UserId");
@@ -273,6 +308,9 @@ namespace StoreApp.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Categories");
         }
     }
 }

@@ -65,31 +65,59 @@ namespace StoreApp.Controllers
         {
             return View();
         }
-      [HttpPost]
-        public async Task<IActionResult> Create(CreateViewModel model)
+   [HttpPost]
+public async Task<IActionResult> Create(CreateViewModel model, IFormFile? imageFile)
+{
+    if (imageFile == null)
+    {
+        ModelState.AddModelError("", "Lütfen bir resim dosyası seçiniz");
+        return View(model);
+    }
+
+    var allowedExtensions = new[] { ".jpg", ".jpeg", ".png" };
+    var extension = Path.GetExtension(imageFile.FileName);
+
+    if (!allowedExtensions.Contains(extension))
+    {
+        ModelState.AddModelError("", "Geçerli bir resim seçiniz");
+        return View(model);
+    }
+
+    if (ModelState.IsValid)
+    {
+        var randomFileName = $"{Guid.NewGuid()}{extension}";
+        var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", randomFileName);
+
+        using (var stream = new FileStream(path, FileMode.Create))
         {
-
-            if (ModelState.IsValid)
-            {
-                var user = new ApplicationUser {
-                    UserName = model.UserName,
-                    Email = model.Email
-                };
-                var hasher = new PasswordHasher<ApplicationUser>();
-                   user.PasswordHash = hasher.HashPassword(user, model.Password);
-                  IdentityResult result = await _userManager.CreateAsync(user);
-                if (result.Succeeded)
-                {
-                  
-                 
-                return RedirectToAction("Login", "Account");
-                }
-              
-
-            }
-            return View(model);
+            await imageFile.CopyToAsync(stream);
         }
 
+        var user = new ApplicationUser
+        {
+            UserName = model.UserName,
+            Email = model.Email,
+            ImageFile = randomFileName
+        };
+
+        var hasher = new PasswordHasher<ApplicationUser>();
+        user.PasswordHash = hasher.HashPassword(user, model.Password);
+
+        IdentityResult result = await _userManager.CreateAsync(user);
+
+        if (result.Succeeded)
+        {
+            return RedirectToAction("Login", "Account");
+        }
+
+        foreach (var error in result.Errors)
+        {
+            ModelState.AddModelError("", error.Description);
+        }
+    }
+
+    return View(model);
+}
           
           public async Task<IActionResult> Logout()
         {
@@ -99,10 +127,20 @@ namespace StoreApp.Controllers
         }
 
 
-           public IActionResult ForgetPassword()
+
+        public async Task<IActionResult> Profile()
         {
-            return View();
+            var userId = _userManager.GetUserId(User);
+            var user = await _userManager.FindByIdAsync(userId);
+
+            if(user == null)
+            {
+                return NotFound(); 
+            }
+
+            return View(user);
         }
+
 
 
          

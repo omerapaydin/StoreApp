@@ -1,0 +1,20 @@
+@model ApplicationUser
+
+<div class="container d-flex justify-content-center">
+  <div class="profile-card col-md-6">
+    <img src="~/img/@Model.ImageFile" alt="Profile Image" class="profile-img" />
+    <h3 class="profile-name">@Model.UserName</h3>
+    <p class="profile-info">
+      Web Developer | JavaScript Enthusiast | Open Source Contributor
+    </p>
+    <p class="profile-info">Location: San Francisco, CA</p>
+    <div class="mt-4">
+      
+      <a href="#" class="btn btn-warning ml-2">Düzenle</a>
+    </div>
+  </div>
+</div>
+
+@section Css {
+    <link rel="stylesheet" href="/css/profile.css">
+}

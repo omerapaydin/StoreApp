@@ -19,7 +19,7 @@ namespace StoreApp.Components
 
         public IViewComponentResult Invoke()
         {
-            return View(_postRepository.Posts.OrderBy(p=>p.PublishedOn).Take(8).ToList());
+            return View(_postRepository.Posts.OrderByDescending(p => p.PublishedOn).Take(8).ToList());
         }
     }
 }

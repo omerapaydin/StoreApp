@@ -1,0 +1,86 @@
+/* Container */
+.container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Profile Card */
+.profile-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
+  transition: all 0.3s ease;
+}
+
+/* Profile Image */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Profile Name */
+.profile-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Profile Info */
+.profile-info {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-custom:hover {
+  background-color: #0056b3;
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  border: 1px solid #007bff;
+  color: #007bff;
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Spacing */
+.mt-4 {
+  margin-top: 20px;
+}
+
+.ml-2 {
+  margin-left: 10px;
+}
+
+/* Hover effect for profile card */
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

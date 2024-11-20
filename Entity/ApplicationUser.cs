@@ -9,6 +9,7 @@ namespace StoreApp.Entity
     public class ApplicationUser:IdentityUser
     {
         public string? FullName { get; set; }
-      public List<Post> Posts { get; set; } = new List<Post>();
+        public string? ImageFile { get; set; }
+        public List<Post> Posts { get; set; } = new List<Post>();
     }
 }

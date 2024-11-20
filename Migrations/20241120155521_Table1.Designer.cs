@@ -11,8 +11,8 @@ using StoreApp.Models;
 namespace StoreApp.Migrations
 {
     [DbContext(typeof(IdentityContext))]
-    [Migration("20241114160007_New2")]
-    partial class New2
+    [Migration("20241120155521_Table1")]
+    partial class Table1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -221,10 +221,44 @@ namespace StoreApp.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("StoreApp.Entity.Category", b =>
+                {
+                    b.Property<int>("CategoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("CategoryId");
+
+                    b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            CategoryId = 1,
+                            Name = "Telefonlar"
+                        },
+                        new
+                        {
+                            CategoryId = 2,
+                            Name = "Bilgisayarlar"
+                        },
+                        new
+                        {
+                            CategoryId = 3,
+                            Name = "Aksesuarlar"
+                        });
+                });
+
             modelBuilder.Entity("StoreApp.Entity.Post", b =>
                 {
                     b.Property<int>("PostId")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("CategoryId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Description")
@@ -251,6 +285,8 @@ namespace StoreApp.Migrations
 
                     b.HasKey("PostId");
 
+                    b.HasIndex("CategoryId");
+
                     b.HasIndex("UserId");
 
                     b.ToTable("Posts");
@@ -259,33 +295,36 @@ namespace StoreApp.Migrations
                         new
                         {
                             PostId = 1,
+                            CategoryId = 1,
                             Description = "Apple Iphone 12 64GB Sarı Cep Telefonu",
                             Image = "1t.jpeg",
                             IsActive = true,
                             Price = "45000",
-                            PublishedOn = new DateTime(2024, 9, 25, 19, 0, 7, 309, DateTimeKind.Local).AddTicks(9080),
+                            PublishedOn = new DateTime(2024, 10, 1, 18, 55, 21, 265, DateTimeKind.Local).AddTicks(2150),
                             Title = "Apple",
                             UserId = "1"
                         },
                         new
                         {
                             PostId = 2,
+                            CategoryId = 1,
                             Description = " Apple Iphone 14 128GB Sarı Cep Telefonu",
                             Image = "2t.jpeg",
                             IsActive = true,
                             Price = "55000",
-                            PublishedOn = new DateTime(2024, 10, 25, 19, 0, 7, 309, DateTimeKind.Local).AddTicks(9100),
+                            PublishedOn = new DateTime(2024, 10, 31, 18, 55, 21, 265, DateTimeKind.Local).AddTicks(2190),
                             Title = "Apple",
                             UserId = "1"
                         },
                         new
                         {
                             PostId = 3,
+                            CategoryId = 1,
                             Description = " Apple Iphone 15 64GB Sarı Cep Telefonu",
                             Image = "3t.jpeg",
                             IsActive = true,
                             Price = "75000",
-                            PublishedOn = new DateTime(2024, 9, 15, 19, 0, 7, 309, DateTimeKind.Local).AddTicks(9100),
+                            PublishedOn = new DateTime(2024, 9, 21, 18, 55, 21, 265, DateTimeKind.Local).AddTicks(2190),
                             Title = "Apple",
                             UserId = "2"
                         });
@@ -298,6 +337,9 @@ namespace StoreApp.Migrations
                     b.Property<string>("FullName")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("ImageFile")
+                        .HasColumnType("TEXT");
+
                     b.HasDiscriminator().HasValue("ApplicationUser");
 
                     b.HasData(
@@ -305,31 +347,33 @@ namespace StoreApp.Migrations
                         {
                             Id = "1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f83b517b-bc73-4425-9f96-3f500cbd6d78",
+                            ConcurrencyStamp = "0da635fb-1c7d-4074-8739-a5d546648637",
                             Email = "info@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAENcy03639NSg8mE+G0LjAlKt1ZoqQwunn6PTlY9hqXDg0FLu+YBtUAfZrNnKfKb3pw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEC1r579En6MfPIFwRTdyi0lBaxGj1JDVwQRg56+s4oheUNobhQG4suinUpKS/o23KA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "00f3840b-ba15-409a-b427-548109eb61d3",
+                            SecurityStamp = "c2d68d7d-ea63-49e9-8167-3d501fac9d25",
                             TwoFactorEnabled = false,
                             UserName = "omerapaydin",
-                            FullName = "Ömer Apaydın"
+                            FullName = "Ömer Apaydın",
+                            ImageFile = "p1.jpg"
                         },
                         new
                         {
                             Id = "2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "647f8d34-91a8-4242-8910-cc009777a75f",
+                            ConcurrencyStamp = "0a5a2d16-46d3-4b31-a7d1-0cd83d6be2c8",
                             Email = "info2@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEOtxvNRpQVWwP9E11/cFFMEF1SIZppMuNql42AcVIdCtBwcRvFiOXJgQXYmTp66nSA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMh2/JDMOT+bighn1DnUWbwz2GR1qTKmEZDtVcEPpESOG1cdu9KQN/T6jhPTFVDypQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "f3144a19-f561-41da-a0ed-1f5e00ef8ee8",
+                            SecurityStamp = "1124aed1-a528-4873-b3a3-3cadc19fe20d",
                             TwoFactorEnabled = false,
                             UserName = "ahmettambuga",
-                            FullName = "Ahmet Tamboğa"
+                            FullName = "Ahmet Tamboğa",
+                            ImageFile = "p2.jpg"
                         });
                 });
 
@@ -386,13 +430,24 @@ namespace StoreApp.Migrations
 
             modelBuilder.Entity("StoreApp.Entity.Post", b =>
                 {
+                    b.HasOne("StoreApp.Entity.Category", "Category")
+                        .WithMany("Posts")
+                        .HasForeignKey("CategoryId");
+
                     b.HasOne("StoreApp.Entity.ApplicationUser", "User")
                         .WithMany("Posts")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("Category");
+
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("StoreApp.Entity.Category", b =>
+                {
+                    b.Navigation("Posts");
                 });
 
             modelBuilder.Entity("StoreApp.Entity.ApplicationUser", b =>

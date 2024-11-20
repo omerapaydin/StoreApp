@@ -23,6 +23,7 @@ namespace StoreApp.Models
                 Id = "1",
                 UserName = "omerapaydin",
                 Email = "info@gmail.com",
+                ImageFile = "p1.jpg",
                 FullName = "Ömer Apaydın",
                 EmailConfirmed = true // E-posta doğrulamasını sağlıyoruz
             };
@@ -34,6 +35,7 @@ namespace StoreApp.Models
                 Id = "2",
                 UserName = "ahmettambuga",
                 Email = "info2@gmail.com",
+                ImageFile = "p2.jpg",
                 FullName = "Ahmet Tamboğa",
                 EmailConfirmed = true 
             };

@@ -255,7 +255,7 @@ namespace StoreApp.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("CategoryId")
+                    b.Property<int?>("CategoryId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Description")
@@ -297,7 +297,7 @@ namespace StoreApp.Migrations
                             Image = "1t.jpeg",
                             IsActive = true,
                             Price = "45000",
-                            PublishedOn = new DateTime(2024, 9, 26, 18, 48, 21, 416, DateTimeKind.Local).AddTicks(320),
+                            PublishedOn = new DateTime(2024, 10, 1, 18, 55, 21, 265, DateTimeKind.Local).AddTicks(2150),
                             Title = "Apple",
                             UserId = "1"
                         },
@@ -309,7 +309,7 @@ namespace StoreApp.Migrations
                             Image = "2t.jpeg",
                             IsActive = true,
                             Price = "55000",
-                            PublishedOn = new DateTime(2024, 10, 26, 18, 48, 21, 416, DateTimeKind.Local).AddTicks(340),
+                            PublishedOn = new DateTime(2024, 10, 31, 18, 55, 21, 265, DateTimeKind.Local).AddTicks(2190),
                             Title = "Apple",
                             UserId = "1"
                         },
@@ -321,7 +321,7 @@ namespace StoreApp.Migrations
                             Image = "3t.jpeg",
                             IsActive = true,
                             Price = "75000",
-                            PublishedOn = new DateTime(2024, 9, 16, 18, 48, 21, 416, DateTimeKind.Local).AddTicks(350),
+                            PublishedOn = new DateTime(2024, 9, 21, 18, 55, 21, 265, DateTimeKind.Local).AddTicks(2190),
                             Title = "Apple",
                             UserId = "2"
                         });
@@ -334,6 +334,9 @@ namespace StoreApp.Migrations
                     b.Property<string>("FullName")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("ImageFile")
+                        .HasColumnType("TEXT");
+
                     b.HasDiscriminator().HasValue("ApplicationUser");
 
                     b.HasData(
@@ -341,31 +344,33 @@ namespace StoreApp.Migrations
                         {
                             Id = "1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "322e99e4-352f-49e8-8f57-6b3dc333b9ef",
+                            ConcurrencyStamp = "0da635fb-1c7d-4074-8739-a5d546648637",
                             Email = "info@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAELr7rslr3EQSx7c/S+yhmtUPopqTnkdnLK836cvj8ZlkiF3sDtb9m1rUedRfxJyJ1w==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEC1r579En6MfPIFwRTdyi0lBaxGj1JDVwQRg56+s4oheUNobhQG4suinUpKS/o23KA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "8825191d-9d58-458e-8580-8ca0ad832cc8",
+                            SecurityStamp = "c2d68d7d-ea63-49e9-8167-3d501fac9d25",
                             TwoFactorEnabled = false,
                             UserName = "omerapaydin",
-                            FullName = "Ömer Apaydın"
+                            FullName = "Ömer Apaydın",
+                            ImageFile = "p1.jpg"
                         },
                         new
                         {
                             Id = "2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "28f425fa-c6c4-4149-b53b-80fa79810f6e",
+                            ConcurrencyStamp = "0a5a2d16-46d3-4b31-a7d1-0cd83d6be2c8",
                             Email = "info2@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEGnA/oGWM8hufxx5qSDbilKaEmRyWn02F/xcQYAwOb50/Is/Txe6R4uEyf1UXQesfA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMh2/JDMOT+bighn1DnUWbwz2GR1qTKmEZDtVcEPpESOG1cdu9KQN/T6jhPTFVDypQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "cb12da79-6292-440f-b2c5-3c0b1d207669",
+                            SecurityStamp = "1124aed1-a528-4873-b3a3-3cadc19fe20d",
                             TwoFactorEnabled = false,
                             UserName = "ahmettambuga",
-                            FullName = "Ahmet Tamboğa"
+                            FullName = "Ahmet Tamboğa",
+                            ImageFile = "p2.jpg"
                         });
                 });
 
@@ -424,9 +429,7 @@ namespace StoreApp.Migrations
                 {
                     b.HasOne("StoreApp.Entity.Category", "Category")
                         .WithMany("Posts")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CategoryId");
 
                     b.HasOne("StoreApp.Entity.ApplicationUser", "User")
                         .WithMany("Posts")
