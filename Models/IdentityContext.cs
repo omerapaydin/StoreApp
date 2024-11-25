@@ -9,7 +9,7 @@ using StoreApp.Entity;
 
 namespace StoreApp.Models
 {
-    public class IdentityContext:IdentityDbContext<IdentityUser>
+    public class IdentityContext:IdentityDbContext<ApplicationUser>
     {
         public IdentityContext(DbContextOptions<IdentityContext> options): base(options)
         {
