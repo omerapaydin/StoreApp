@@ -16,6 +16,7 @@ namespace StoreApp.Controllers
 
     public class HomeController:Controller
     {
+        public int pageSize = 3;
 
         private IPostRepository _postRepository;
         private ICategoryRepository _categoryRepository;
@@ -32,27 +33,33 @@ namespace StoreApp.Controllers
         {
             return View(_categoryRepository.Categories.ToList());
         }
-       public IActionResult List(string search, int? id)
+            public IActionResult List(string search, int? id, int page = 1)
         {
-            var products = _postRepository.Posts;
-            var categories = _categoryRepository.Categories;
+            var products = _postRepository.Posts.AsQueryable();
+            var categories = _categoryRepository.Categories.ToList();
 
-           
             if (id != null)
             {
                 products = products.Where(p => p.CategoryId == id);
+                ViewBag.CategoryId = id; 
             }
 
-          
             if (!string.IsNullOrEmpty(search))
             {
                 products = products.Where(p => p.Description.ToLower().Contains(search.ToLower()));
+                ViewBag.Search = search; 
             }
 
             var viewModel = new ProductListViewModel
             {
-                Products = products.ToList(),
-                Categories = categories.ToList()
+                Products = products.Skip((page - 1) * pageSize).Take(pageSize).ToList(),
+                Categories = categories,
+                PageInfo = new PageInfo
+                {
+                    ItemsPerPage = pageSize,
+                    TotalItems = products.Count(),
+                    CurrentPage = page
+                }
             };
 
             return View(viewModel);
