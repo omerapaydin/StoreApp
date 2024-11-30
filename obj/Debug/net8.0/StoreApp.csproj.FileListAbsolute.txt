@@ -277,3 +277,10 @@
 /Users/omerapaydin/Desktop/Back-end/net8.0/E-Ticaret/StoreApp/obj/Debug/net8.0/StoreApp.genruntimeconfig.cache
 /Users/omerapaydin/Desktop/Back-end/net8.0/E-Ticaret/StoreApp/obj/Debug/net8.0/ref/StoreApp.dll
 /Users/omerapaydin/Desktop/E-Ticaret/StoreApp/obj/Debug/net8.0/StoreApp.sourcelink.json
+/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/bin/Debug/net8.0/Microsoft.AspNetCore.JsonPatch.dll
+/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/bin/Debug/net8.0/Microsoft.AspNetCore.Razor.Language.dll
+/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/bin/Debug/net8.0/Microsoft.CodeAnalysis.Razor.dll
+/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/bin/Debug/net8.0/Newtonsoft.Json.Bson.dll
+/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/bin/Debug/net8.0/System.Security.Permissions.dll

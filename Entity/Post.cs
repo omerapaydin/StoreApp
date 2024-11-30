@@ -12,7 +12,7 @@ namespace StoreApp.Entity
         public string? Description { get; set; }
         public string? Image { get; set; }
         public DateTime PublishedOn { get; set; }
-        public string? Price { get; set; }
+        public decimal? Price { get; set; }
         public bool IsActive { get; set; }
         public string UserId { get; set; }
         public ApplicationUser User { get; set; }

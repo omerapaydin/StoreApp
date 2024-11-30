@@ -51,9 +51,9 @@ namespace StoreApp.Models
 
            
             modelBuilder.Entity<Post>().HasData(
-                new Post { PostId = 1, Title = "Apple", Description = "Apple Iphone 12 64GB Sarı Cep Telefonu", PublishedOn = DateTime.Now.AddDays(-50), Image = "1t.jpeg",Price = "45000", IsActive= true,UserId = "1" ,CategoryId = 1},
-                new Post { PostId = 2, Title = "Apple", Description = " Apple Iphone 14 128GB Sarı Cep Telefonu", PublishedOn = DateTime.Now.AddDays(-20), Image = "2t.jpeg",Price = "55000", IsActive= true, UserId = "1" ,CategoryId = 1},
-                new Post { PostId = 3, Title = "Apple", Description = " Apple Iphone 15 64GB Sarı Cep Telefonu", PublishedOn = DateTime.Now.AddDays(-60), Image = "3t.jpeg", Price = "75000", IsActive= true,UserId = "2" ,CategoryId = 1}
+                new Post { PostId = 1, Title = "Apple", Description = "Apple Iphone 12 64GB Sarı Cep Telefonu", PublishedOn = DateTime.Now.AddDays(-50), Image = "1t.jpeg",Price = 45000, IsActive= true,UserId = "1" ,CategoryId = 1},
+                new Post { PostId = 2, Title = "Apple", Description = " Apple Iphone 14 128GB Sarı Cep Telefonu", PublishedOn = DateTime.Now.AddDays(-20), Image = "2t.jpeg",Price = 55000, IsActive= true, UserId = "1" ,CategoryId = 1},
+                new Post { PostId = 3, Title = "Apple", Description = " Apple Iphone 15 64GB Sarı Cep Telefonu", PublishedOn = DateTime.Now.AddDays(-60), Image = "3t.jpeg", Price = 75000, IsActive= true,UserId = "2" ,CategoryId = 1}
             );
         }
 

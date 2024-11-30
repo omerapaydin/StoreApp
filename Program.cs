@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddRazorPages();
 
 
 builder.Services.AddDbContext<IdentityContext>(options => {
@@ -30,7 +30,12 @@ builder.Services.Configure<IdentityOptions>( options =>{
 );
 
 builder.Services.AddScoped<IPostRepository,EfPostRepository>();
+builder.Services.AddScoped<IOrderRepository,EfOrderRepository>();
 builder.Services.AddScoped<ICategoryRepository,EfCategoryRepository>();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
+
+
 
 builder.Services.ConfigureApplicationCookie(options =>{
     options.LoginPath = "/Account/Login"; 
@@ -46,6 +51,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseSession();
 
 
 app.MapControllerRoute(
@@ -53,5 +59,7 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}"
 
 );
+
+app.MapRazorPages();
 
 app.Run();

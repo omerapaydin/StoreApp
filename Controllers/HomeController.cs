@@ -124,12 +124,23 @@ namespace StoreApp.Controllers
                     {
                         Title = model.Title,
                         Description = model.Description,
-                        Price = model.Price,
+                       
                         Image = randomFileName,
                         PublishedOn = DateTime.Now,
                         UserId = userId,
                         CategoryId = model.CategoryId
                     };
+                         if (decimal.TryParse(model.Price, out decimal parsedPrice))
+                    {
+                        post.Price = parsedPrice;
+                    }
+                    else
+                    {
+                        // Eğer dönüşüm başarısız olursa, null değer atayabilirsiniz veya hata yönetimi yapabilirsiniz
+                        post.Price = null;
+                        // veya
+                        // Console.WriteLine("Geçersiz fiyat değeri");
+                    }
 
                 _postRepository.AddPost(post);
 

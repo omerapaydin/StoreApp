@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StoreApp.Models;
 
@@ -10,9 +11,11 @@ using StoreApp.Models;
 namespace StoreApp.Migrations
 {
     [DbContext(typeof(IdentityContext))]
-    partial class IdentityContextModelSnapshot : ModelSnapshot
+    [Migration("20241130155749_NewTable4")]
+    partial class NewTable4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.10");
@@ -219,15 +222,15 @@ namespace StoreApp.Migrations
                         {
                             Id = "1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "dbb34c8b-5796-4d02-9553-2bbf7865bbad",
+                            ConcurrencyStamp = "cf07a43a-1e6f-4de0-a192-f35b0c5fa415",
                             Email = "info@gmail.com",
                             EmailConfirmed = true,
                             FullName = "Ömer Apaydın",
                             ImageFile = "p1.jpg",
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEN1Bzvx7q13ihzDKahY37JWHe3sIVE4ql+/c/TEvIVnHIiNm1+4PJrYsGbpk6V+IBA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEDG00Vtyh/945XrmJzracmGK3+Tr1TYtv07pbB41ejvueyeiOjGOV6u1ynEjfU0gMg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "01d007d6-8205-46ff-9248-4f7027ef5219",
+                            SecurityStamp = "bd9e3246-212f-4ac3-b3f0-7a29559ec9f4",
                             TwoFactorEnabled = false,
                             UserName = "omerapaydin"
                         },
@@ -235,15 +238,15 @@ namespace StoreApp.Migrations
                         {
                             Id = "2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "8ef13749-193c-413e-891b-0f79e1aa2cec",
+                            ConcurrencyStamp = "4c5ad155-e6e0-4f5c-bc27-6dbc92fafa9f",
                             Email = "info2@gmail.com",
                             EmailConfirmed = true,
                             FullName = "Ahmet Tamboğa",
                             ImageFile = "p2.jpg",
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAENF6yv2KE/AWLNSrf2WRfMQUbu1NyE36nBOVShxb4iFDe2pUBa8rLPo3p1GPXZ1zqw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEKhtSt1U9iW2AlztrAK1XtmK+U/EXmzhBVPH7fQc4FtAIwmpeNkqFUJr5EDy12PnPw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "7b199ab3-bb22-4e9b-8ff1-7a451ed531de",
+                            SecurityStamp = "cf3e81e0-808d-4c95-9bbe-daffd27783eb",
                             TwoFactorEnabled = false,
                             UserName = "ahmettambuga"
                         });
@@ -389,7 +392,7 @@ namespace StoreApp.Migrations
                             Image = "1t.jpeg",
                             IsActive = true,
                             Price = 45000m,
-                            PublishedOn = new DateTime(2024, 10, 11, 19, 3, 58, 343, DateTimeKind.Local).AddTicks(9480),
+                            PublishedOn = new DateTime(2024, 10, 11, 18, 57, 49, 375, DateTimeKind.Local).AddTicks(8700),
                             Title = "Apple",
                             UserId = "1"
                         },
@@ -401,7 +404,7 @@ namespace StoreApp.Migrations
                             Image = "2t.jpeg",
                             IsActive = true,
                             Price = 55000m,
-                            PublishedOn = new DateTime(2024, 11, 10, 19, 3, 58, 343, DateTimeKind.Local).AddTicks(9520),
+                            PublishedOn = new DateTime(2024, 11, 10, 18, 57, 49, 375, DateTimeKind.Local).AddTicks(8740),
                             Title = "Apple",
                             UserId = "1"
                         },
@@ -413,7 +416,7 @@ namespace StoreApp.Migrations
                             Image = "3t.jpeg",
                             IsActive = true,
                             Price = 75000m,
-                            PublishedOn = new DateTime(2024, 10, 1, 19, 3, 58, 343, DateTimeKind.Local).AddTicks(9520),
+                            PublishedOn = new DateTime(2024, 10, 1, 18, 57, 49, 375, DateTimeKind.Local).AddTicks(8740),
                             Title = "Apple",
                             UserId = "2"
                         });

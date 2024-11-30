@@ -16,8 +16,10 @@ namespace StoreApp.Models
             
         }
 
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<Post> Posts { get; set; }
-          public DbSet<Category> Categories { get; set; } 
+        public DbSet<Category> Categories { get; set; } 
 
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -27,17 +29,25 @@ namespace StoreApp.Models
             builder.Seed();
 
             
-            builder.Entity<Post>()
-                .HasOne(p => p.User)         
-                .WithMany(u => u.Posts)      
-                .HasForeignKey(p => p.UserId); 
-
+                builder.Entity<Post>()
+                    .HasOne(p => p.User)         
+                    .WithMany(u => u.Posts)      
+                    .HasForeignKey(p => p.UserId); 
 
                 builder.Entity<Post>()
-                .HasOne(p => p.Category)       
-                .WithMany(c => c.Posts)     
-                .HasForeignKey(p => p.CategoryId); 
+                    .HasOne(p => p.Category)       
+                    .WithMany(c => c.Posts)     
+                    .HasForeignKey(p => p.CategoryId); 
 
+                builder.Entity<OrderItem>()
+                        .HasOne(oi => oi.Order)        
+                        .WithMany(o => o.OrderItems) 
+                        .HasForeignKey(oi => oi.OrderId);
+
+                builder.Entity<OrderItem>()
+                        .HasOne(oi => oi.Post)       
+                        .WithMany()                  
+                        .HasForeignKey(oi => oi.PostId);
 
 
         }
