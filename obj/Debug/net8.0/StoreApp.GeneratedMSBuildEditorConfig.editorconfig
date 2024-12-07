@@ -36,8 +36,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/Views/Account/ConfirmEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Db25maXJtRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/Views/Account/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/Views/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Gb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/Views/Account/Login.cshtml]
@@ -46,6 +54,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/Views/Account/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Qcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/Views/Account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/Views/Home/AddProduct.cshtml]
@@ -62,6 +74,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/Views/Home/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/Views/Order/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXIvQ2hlY2tvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/Views/Shared/Components/SnEklenen/Default.cshtml]

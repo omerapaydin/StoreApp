@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace StoreApp.Migrations
 {
     /// <inheritdoc />
-    public partial class NewTable5 : Migration
+    public partial class TableNew : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -16,35 +16,35 @@ namespace StoreApp.Migrations
                 keyColumn: "Id",
                 keyValue: "1",
                 columns: new[] { "ConcurrencyStamp", "PasswordHash", "SecurityStamp" },
-                values: new object[] { "dbb34c8b-5796-4d02-9553-2bbf7865bbad", "AQAAAAIAAYagAAAAEN1Bzvx7q13ihzDKahY37JWHe3sIVE4ql+/c/TEvIVnHIiNm1+4PJrYsGbpk6V+IBA==", "01d007d6-8205-46ff-9248-4f7027ef5219" });
+                values: new object[] { "1039e146-4ffe-49f8-acbb-c4840213d288", "AQAAAAIAAYagAAAAEPpi+2d5GdBRi6xtlDLjzHHz/vNUqVTowSsTVbP98kkpB9aQTshg1flHutKSu54UTw==", "2c0cdf93-b049-4e40-a02d-ca9368322e3e" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "2",
                 columns: new[] { "ConcurrencyStamp", "PasswordHash", "SecurityStamp" },
-                values: new object[] { "8ef13749-193c-413e-891b-0f79e1aa2cec", "AQAAAAIAAYagAAAAENF6yv2KE/AWLNSrf2WRfMQUbu1NyE36nBOVShxb4iFDe2pUBa8rLPo3p1GPXZ1zqw==", "7b199ab3-bb22-4e9b-8ff1-7a451ed531de" });
+                values: new object[] { "7d3fb39c-d90a-44c6-a3d8-3993e6bf42b4", "AQAAAAIAAYagAAAAELFqju9SUKi/woU5bbIExt5ZbOqfYkOsaoAGfjZmNYlIC/fmsREyYaJYyEFnuATKtw==", "a5685d10-168e-4023-9b33-28c122c68a3a" });
 
             migrationBuilder.UpdateData(
                 table: "Posts",
                 keyColumn: "PostId",
                 keyValue: 1,
                 column: "PublishedOn",
-                value: new DateTime(2024, 10, 11, 19, 3, 58, 343, DateTimeKind.Local).AddTicks(9480));
+                value: new DateTime(2024, 10, 18, 20, 51, 15, 982, DateTimeKind.Local).AddTicks(8310));
 
             migrationBuilder.UpdateData(
                 table: "Posts",
                 keyColumn: "PostId",
                 keyValue: 2,
                 column: "PublishedOn",
-                value: new DateTime(2024, 11, 10, 19, 3, 58, 343, DateTimeKind.Local).AddTicks(9520));
+                value: new DateTime(2024, 11, 17, 20, 51, 15, 982, DateTimeKind.Local).AddTicks(8350));
 
             migrationBuilder.UpdateData(
                 table: "Posts",
                 keyColumn: "PostId",
                 keyValue: 3,
                 column: "PublishedOn",
-                value: new DateTime(2024, 10, 1, 19, 3, 58, 343, DateTimeKind.Local).AddTicks(9520));
+                value: new DateTime(2024, 10, 8, 20, 51, 15, 982, DateTimeKind.Local).AddTicks(8350));
         }
 
         /// <inheritdoc />

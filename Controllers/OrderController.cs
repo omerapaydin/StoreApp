@@ -10,12 +10,12 @@ namespace StoreApp.Controllers
 {
     public class OrderController:Controller
     {
-        private Cart cart;
+        private Cart _cart;
         private IOrderRepository _orderRepository;
 
             public OrderController(Cart cartService, IOrderRepository orderRepository)
         {
-            cart = cartService;
+            _cart = cartService;
             _orderRepository = orderRepository;
         }
 
@@ -23,7 +23,16 @@ namespace StoreApp.Controllers
 
         public IActionResult Checkout()
         {
-            return View(new OrderModel() { Cart = cart });
+            var orderModel = new OrderModel
+            {
+                Cart = _cart, // Cart bilgilerini doldurun
+                Name = "",
+                City = "",
+                Phone = "",
+                Email = "",
+                AddressLine = ""
+            };
+            return View(orderModel);
         }
         
     }
