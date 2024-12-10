@@ -2,18 +2,17 @@
 
  <h2 style=" color: #743873;" class="my-3">Your Products</h2>
 
-@if(Model.Count==0)
-{
+
      <a asp-controller="Home" asp-action="AddProduct" class="btn btn-warning btn-lg m-3">
             <i class="fa fa-plus-circle me-2"></i> Yeni Ürün Oluştur
           </a>
-}else{
+
      @foreach(var pst in Model)
         {
            
             <div class="card_color col-lg-3 col-md-4 col-sm-6">
                 <figure class="card shadow">
-                <a href="" class="img-wrap">
+                <a href="/home/details/@pst.PostId" class="img-wrap">
                     <img src="~/img/@pst.Image" alt="" />
                 </a>
 
@@ -29,7 +28,6 @@
                 </figure>
             </div>
         }
-}
 
 
  

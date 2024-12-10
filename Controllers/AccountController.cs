@@ -118,8 +118,7 @@ public async Task<IActionResult> Create(CreateViewModel model, IFormFile? imageF
                 var url = Url.Action("ConfirmEmail", "Account", new{user.Id,token});
 
                   
-                await _emailSender.SendEmailAsync(user.Email, "Hesap Onayı",$"Lütfen email hesabınızı onaylamak için linke <a href='http://localhost:5041{url}'> tıklayınız. <a/>");
-
+                await _emailSender.SendEmailAsync(user.Email, "Hesap Onayı",$"Lütfen email hesabınızı onaylamak için linke <a href='http://localhost:5172{url}'> tıklayınız. <a/>");
 
 
                 TempData["message"] = "Email hesabınızdaki onay mailine tıkla.";
@@ -216,7 +215,7 @@ public async Task<IActionResult> Create(CreateViewModel model, IFormFile? imageF
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
              var url = Url.Action("ResetPassword", "Account", new{user.Id,token});
 
-              await _emailSender.SendEmailAsync(user.Email, "Şifre Sıfırlama",$"Lütfen şifre değiştirmek için linke <a href='http://localhost:5041{url}'> tıklayınız. <a/>");
+              await _emailSender.SendEmailAsync(user.Email, "Şifre Sıfırlama",$"Lütfen şifre değiştirmek için linke <a href='http://localhost:5172{url}'> tıklayınız. <a/>");
 
               TempData["message"] = "Epostanıza gönderilen link ile şifrenizi sıfırlayabilirsiniz.";
 

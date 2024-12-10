@@ -9,8 +9,20 @@
       "PackagePath": "staticwebassets/css/profile.css"
     },
     {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/07965c0b-c235-4dbc-a921-a933aac30d02.jpg",
+      "PackagePath": "staticwebassets/img/07965c0b-c235-4dbc-a921-a933aac30d02.jpg"
+    },
+    {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/09a9748e-1b04-42ad-92ff-df47ef54cfb8.jpeg",
       "PackagePath": "staticwebassets/img/09a9748e-1b04-42ad-92ff-df47ef54cfb8.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/0cd843a2-4ea4-49c9-a949-33346599a7f6.jpg",
+      "PackagePath": "staticwebassets/img/0cd843a2-4ea4-49c9-a949-33346599a7f6.jpg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/0f0a8b5f-17dd-453f-b839-a17a7d90e965.jpg",
+      "PackagePath": "staticwebassets/img/0f0a8b5f-17dd-453f-b839-a17a7d90e965.jpg"
     },
     {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/1-big.jpeg",
@@ -21,8 +33,16 @@
       "PackagePath": "staticwebassets/img/1.jpeg"
     },
     {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/1502fcc4-1fe5-4d7f-b3af-95f97dcbb31a.jpg",
+      "PackagePath": "staticwebassets/img/1502fcc4-1fe5-4d7f-b3af-95f97dcbb31a.jpg"
+    },
+    {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/18359dba-ceef-4740-b033-62f5650461c1.jpg",
       "PackagePath": "staticwebassets/img/18359dba-ceef-4740-b033-62f5650461c1.jpg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/1ae0fcc7-0d27-4ad5-a26d-b8c35699baa1.jpg",
+      "PackagePath": "staticwebassets/img/1ae0fcc7-0d27-4ad5-a26d-b8c35699baa1.jpg"
     },
     {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/1b3f5838-223e-4a42-82bf-483ee7c6d7cb.jpg",
@@ -61,12 +81,28 @@
       "PackagePath": "staticwebassets/img/3.jpeg"
     },
     {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/323fab9e-9bc3-4ba9-bb9c-21e08a33d183.jpeg",
+      "PackagePath": "staticwebassets/img/323fab9e-9bc3-4ba9-bb9c-21e08a33d183.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/3d1ab2d9-988d-466d-b122-4c7d83aa9fb5.jpg",
+      "PackagePath": "staticwebassets/img/3d1ab2d9-988d-466d-b122-4c7d83aa9fb5.jpg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/3dc1a651-45ec-4644-9ca2-7981f2fe6d9d.jpg",
+      "PackagePath": "staticwebassets/img/3dc1a651-45ec-4644-9ca2-7981f2fe6d9d.jpg"
+    },
+    {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/3t.jpeg",
       "PackagePath": "staticwebassets/img/3t.jpeg"
     },
     {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/4.jpeg",
       "PackagePath": "staticwebassets/img/4.jpeg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/415db329-5f49-4e8e-b8f1-e0e28f77df91.jpg",
+      "PackagePath": "staticwebassets/img/415db329-5f49-4e8e-b8f1-e0e28f77df91.jpg"
     },
     {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/436eae3f-d3fd-41c1-a5aa-514e8c89a8dd.jpg",
@@ -93,6 +129,14 @@
       "PackagePath": "staticwebassets/img/6.jpeg"
     },
     {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/6dff111e-9af2-4f35-a24b-2e1cca2b4cf9.jpg",
+      "PackagePath": "staticwebassets/img/6dff111e-9af2-4f35-a24b-2e1cca2b4cf9.jpg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/6ef5b2f1-f213-49c1-a01a-9562fdbd8316.jpg",
+      "PackagePath": "staticwebassets/img/6ef5b2f1-f213-49c1-a01a-9562fdbd8316.jpg"
+    },
+    {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/6efb8823-0bec-4406-95b3-c4b12c07fa6c.jpg",
       "PackagePath": "staticwebassets/img/6efb8823-0bec-4406-95b3-c4b12c07fa6c.jpg"
     },
@@ -101,8 +145,16 @@
       "PackagePath": "staticwebassets/img/7.jpeg"
     },
     {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/717d82a5-86b1-46bf-b549-7928f5fdf3c0.jpeg",
+      "PackagePath": "staticwebassets/img/717d82a5-86b1-46bf-b549-7928f5fdf3c0.jpeg"
+    },
+    {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/721002c7-88be-435f-a157-5a7391889ab4.jpg",
       "PackagePath": "staticwebassets/img/721002c7-88be-435f-a157-5a7391889ab4.jpg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/75758588-7536-47cf-b6d6-302ea1a9714a.jpg",
+      "PackagePath": "staticwebassets/img/75758588-7536-47cf-b6d6-302ea1a9714a.jpg"
     },
     {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/783afcea-3474-4afd-9713-c19b6cc788ac.jpeg",
@@ -129,12 +181,24 @@
       "PackagePath": "staticwebassets/img/917d1fbb-8b44-4a49-a23e-75667b9c8c9f.jpeg"
     },
     {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/941ab124-893b-475b-b094-75f517ab0e74.jpg",
+      "PackagePath": "staticwebassets/img/941ab124-893b-475b-b094-75f517ab0e74.jpg"
+    },
+    {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/a.jpg",
       "PackagePath": "staticwebassets/img/a.jpg"
     },
     {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/a39f38bb-ab23-4418-aeed-0e5f5e4a32be.jpg",
+      "PackagePath": "staticwebassets/img/a39f38bb-ab23-4418-aeed-0e5f5e4a32be.jpg"
+    },
+    {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/a3ec5b2c-d044-473a-87d6-77ceee5f6c25.jpg",
       "PackagePath": "staticwebassets/img/a3ec5b2c-d044-473a-87d6-77ceee5f6c25.jpg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/a79ef998-497f-4b20-90fc-34150729378b.jpg",
+      "PackagePath": "staticwebassets/img/a79ef998-497f-4b20-90fc-34150729378b.jpg"
     },
     {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/apple-urunleri.jpg",
@@ -145,8 +209,20 @@
       "PackagePath": "staticwebassets/img/apple.jpeg"
     },
     {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/b14ec09c-fb6b-46ba-8dce-f3518cb37fe3.jpg",
+      "PackagePath": "staticwebassets/img/b14ec09c-fb6b-46ba-8dce-f3518cb37fe3.jpg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/b26c16a6-e781-450c-b35f-d170748f61d5.jpg",
+      "PackagePath": "staticwebassets/img/b26c16a6-e781-450c-b35f-d170748f61d5.jpg"
+    },
+    {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/b521754e-74de-4a2c-95cc-cb17f2b2b4a2.jpg",
       "PackagePath": "staticwebassets/img/b521754e-74de-4a2c-95cc-cb17f2b2b4a2.jpg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/b9be1adc-a848-42ea-9a20-aec25e3ff02d.jpg",
+      "PackagePath": "staticwebassets/img/b9be1adc-a848-42ea-9a20-aec25e3ff02d.jpg"
     },
     {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/bc8d7d65-7cdb-428d-b079-628defde49a0.jpg",
@@ -155,6 +231,10 @@
     {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/d34694e8-fd7f-4b5d-8e28-f1be18b4782b.jpg",
       "PackagePath": "staticwebassets/img/d34694e8-fd7f-4b5d-8e28-f1be18b4782b.jpg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/d4a7d879-a4df-4dde-9939-44e934e302e4.jpg",
+      "PackagePath": "staticwebassets/img/d4a7d879-a4df-4dde-9939-44e934e302e4.jpg"
     },
     {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/d6c07c72-22d3-468b-a32f-683659a5069a.jpeg",
@@ -169,8 +249,20 @@
       "PackagePath": "staticwebassets/img/e5657632-80ce-46c2-9cc4-2e5089e06ee8.jpeg"
     },
     {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/f0a4930a-f991-4015-8022-086d9fdc130c.jpg",
+      "PackagePath": "staticwebassets/img/f0a4930a-f991-4015-8022-086d9fdc130c.jpg"
+    },
+    {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/f18524cd-592e-4c30-9e44-1fd017c8398f.jpg",
       "PackagePath": "staticwebassets/img/f18524cd-592e-4c30-9e44-1fd017c8398f.jpg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/f1badbd6-7cd3-4334-b7cc-d3651b0ba9f8.jpg",
+      "PackagePath": "staticwebassets/img/f1badbd6-7cd3-4334-b7cc-d3651b0ba9f8.jpg"
+    },
+    {
+      "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/f6745609-456a-4cd4-8379-386384a7f04f.jpg",
+      "PackagePath": "staticwebassets/img/f6745609-456a-4cd4-8379-386384a7f04f.jpg"
     },
     {
       "Id": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/img/fdc19c1e-fcb2-4c10-8364-2fb3af8ddbf6.jpg",
