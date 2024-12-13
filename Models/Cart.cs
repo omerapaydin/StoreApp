@@ -26,9 +26,7 @@ namespace StoreApp.Models
 
         public void RemoveItem(Post post)
         {
-           var removedItems = Items.Where(i => i.Post.PostId == post.PostId).ToList();
-
-    Items.RemoveAll(i => i.Post.PostId == post.PostId);
+           Items.RemoveAll(i=>i.Post.PostId == post.PostId);
         }
 
         public decimal CalculateTotal()

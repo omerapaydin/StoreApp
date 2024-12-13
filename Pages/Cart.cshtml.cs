@@ -16,7 +16,7 @@ namespace StoreApp.Pages
             _postRepository = postRepository;
         }
 
-        public Cart Carts { get; set; }
+        public Cart? Carts { get; set; }
 
        public void OnGet()
         {
@@ -37,33 +37,20 @@ namespace StoreApp.Pages
         }
 
 
-        public IActionResult OnPostRemove(int PostId)
+       public IActionResult OnPostRemove(int PostId)
 {
+    Carts = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
 
-    if (Carts == null)
+    var itemToRemove = Carts.Items.FirstOrDefault(p => p.Post.PostId == PostId);
+
+    if (itemToRemove != null)
     {
-        Carts = new Cart();
+        Carts.RemoveItem(itemToRemove.Post);
+        HttpContext.Session.SetJson("cart", Carts);
     }
-
-    if (Carts.Items == null || !Carts.Items.Any())
-    {
-        return RedirectToPage("/Cart");
-    }
-
-    var cartItem = Carts.Items.FirstOrDefault(p => p.Post.PostId == PostId);
-
-    if (cartItem == null)
-    {
-        return RedirectToPage("/Cart");
-    }
-
-    var post = cartItem.Post;
-    Carts.RemoveItem(post); // Silme işlemi
-
-    // Sepeti güncelle
-    HttpContext.Session.SetJson("cart", Carts);
 
     return RedirectToPage("/Cart");
 }
+
+        }
     }
-}
