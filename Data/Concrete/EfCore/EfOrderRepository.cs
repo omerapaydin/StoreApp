@@ -16,7 +16,7 @@ namespace StoreApp.Data.Concrete.EfCore
         {
             _context = context;
         }
-        public IQueryable<Order> Categories => _context.Orders;
+        public IQueryable<Order> Orders => _context.Orders;
 
         public void AddOrder(Order order)
         {

@@ -18,6 +18,6 @@ namespace StoreApp.Models
         public string Email { get; set; } = null!;
         public string AddressLine { get; set; } = null!;
         [BindNever]
-        public Cart? Cart { get; set; } = null!;
+        public Cart? Cart { get; set; } 
     }
 }

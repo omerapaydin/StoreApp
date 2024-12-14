@@ -8,7 +8,7 @@ namespace StoreApp.Data.Abstract
 {
     public interface IOrderRepository
     {
-       IQueryable<Order>  Categories { get; }
+       IQueryable<Order>  Orders { get; }
 
         void AddOrder(Order Order);
     }
