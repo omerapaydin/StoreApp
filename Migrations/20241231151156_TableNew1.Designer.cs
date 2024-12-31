@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StoreApp.Models;
 
@@ -10,9 +11,11 @@ using StoreApp.Models;
 namespace StoreApp.Migrations
 {
     [DbContext(typeof(IdentityContext))]
-    partial class IdentityContextModelSnapshot : ModelSnapshot
+    [Migration("20241231151156_TableNew1")]
+    partial class TableNew1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.10");
@@ -219,15 +222,15 @@ namespace StoreApp.Migrations
                         {
                             Id = "1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "72b1e17c-1b21-497c-8f3a-bf2204b6e560",
+                            ConcurrencyStamp = "598a4811-2b92-4f51-aab5-093f275ec73a",
                             Email = "info@gmail.com",
                             EmailConfirmed = true,
                             FullName = "Ömer Apaydın",
                             ImageFile = "p1.jpg",
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEKgdbNEol3C6Z4RSHc0cy6EQn9rXhjqAghqG+FGFycf4bwI3616+ZiaZful+T2qZ7A==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEGm0N7mosEBFxv4qhKAP46F4Pc3lGxCuElenUHmz0Nm3zMY56do5kpF7irL8HRholA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6d51316f-f742-4d0c-b926-d4f644051111",
+                            SecurityStamp = "b69f2176-294c-4091-a083-02b0e11e383c",
                             TwoFactorEnabled = false,
                             UserName = "omerapaydin"
                         },
@@ -235,15 +238,15 @@ namespace StoreApp.Migrations
                         {
                             Id = "2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "418e1a8d-b1c9-4ab7-bdf1-3030f2185f80",
+                            ConcurrencyStamp = "01713934-9081-48e6-b84d-1974f76bc5ff",
                             Email = "info2@gmail.com",
                             EmailConfirmed = true,
                             FullName = "Ahmet Tamboğa",
                             ImageFile = "p2.jpg",
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAELWfiGO3phoFcZZs0UXt9IyY1ydM+1nhlYcTgZV5cWjU+1F7BA1DCJljnZeLLeGIzg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJxvUoOrNfCi7riLE0PPk1Vx1JqCuqu1o5i8xqtAYzCaeVuxLnq9nM6lp7aGYS8V1w==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "d22aee2f-818e-4ffb-aa2f-3309a7eac8de",
+                            SecurityStamp = "8ef21a80-e747-4a7d-a4b2-f942c6c81b8b",
                             TwoFactorEnabled = false,
                             UserName = "ahmettambuga"
                         });
@@ -278,34 +281,6 @@ namespace StoreApp.Migrations
                             CategoryId = 3,
                             Name = "Aksesuarlar"
                         });
-                });
-
-            modelBuilder.Entity("StoreApp.Entity.Comment", b =>
-                {
-                    b.Property<int>("CommentId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("PostId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("PublishedOn")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Text")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("CommentId");
-
-                    b.HasIndex("PostId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("StoreApp.Entity.Order", b =>
@@ -417,7 +392,7 @@ namespace StoreApp.Migrations
                             Image = "1t.jpeg",
                             IsActive = true,
                             Price = 45000m,
-                            PublishedOn = new DateTime(2024, 11, 11, 18, 20, 15, 312, DateTimeKind.Local).AddTicks(6840),
+                            PublishedOn = new DateTime(2024, 11, 11, 18, 11, 55, 948, DateTimeKind.Local).AddTicks(4330),
                             Title = "Apple",
                             UserId = "1"
                         },
@@ -429,7 +404,7 @@ namespace StoreApp.Migrations
                             Image = "2t.jpeg",
                             IsActive = true,
                             Price = 55000m,
-                            PublishedOn = new DateTime(2024, 12, 11, 18, 20, 15, 312, DateTimeKind.Local).AddTicks(6880),
+                            PublishedOn = new DateTime(2024, 12, 11, 18, 11, 55, 948, DateTimeKind.Local).AddTicks(4370),
                             Title = "Apple",
                             UserId = "1"
                         },
@@ -441,7 +416,7 @@ namespace StoreApp.Migrations
                             Image = "3t.jpeg",
                             IsActive = true,
                             Price = 75000m,
-                            PublishedOn = new DateTime(2024, 11, 1, 18, 20, 15, 312, DateTimeKind.Local).AddTicks(6890),
+                            PublishedOn = new DateTime(2024, 11, 1, 18, 11, 55, 948, DateTimeKind.Local).AddTicks(4370),
                             Title = "Apple",
                             UserId = "2"
                         });
@@ -498,25 +473,6 @@ namespace StoreApp.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("StoreApp.Entity.Comment", b =>
-                {
-                    b.HasOne("StoreApp.Entity.Post", "Post")
-                        .WithMany("Comments")
-                        .HasForeignKey("PostId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("StoreApp.Entity.ApplicationUser", "User")
-                        .WithMany("Comments")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Post");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("StoreApp.Entity.OrderItem", b =>
                 {
                     b.HasOne("StoreApp.Entity.Order", "Order")
@@ -555,8 +511,6 @@ namespace StoreApp.Migrations
 
             modelBuilder.Entity("StoreApp.Entity.ApplicationUser", b =>
                 {
-                    b.Navigation("Comments");
-
                     b.Navigation("Posts");
                 });
 
@@ -568,11 +522,6 @@ namespace StoreApp.Migrations
             modelBuilder.Entity("StoreApp.Entity.Order", b =>
                 {
                     b.Navigation("OrderItems");
-                });
-
-            modelBuilder.Entity("StoreApp.Entity.Post", b =>
-                {
-                    b.Navigation("Comments");
                 });
 #pragma warning restore 612, 618
         }

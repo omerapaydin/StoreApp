@@ -19,14 +19,16 @@ namespace StoreApp.Controllers
         public int pageSize = 3;
 
         private IPostRepository _postRepository;
+        private ICommentRepository _commentRepository;
         private ICategoryRepository _categoryRepository;
          
         private UserManager<ApplicationUser> _userManager;
-        public HomeController(IPostRepository postRepository,UserManager<ApplicationUser> userManager,ICategoryRepository categoryRepository)
+        public HomeController(IPostRepository postRepository,UserManager<ApplicationUser> userManager,ICategoryRepository categoryRepository,ICommentRepository commentRepository)
         {
             _postRepository = postRepository;
             _userManager = userManager;
             _categoryRepository = categoryRepository;
+            _commentRepository = commentRepository;
         }
 
         public IActionResult Index()
@@ -66,7 +68,7 @@ namespace StoreApp.Controllers
         }
         public async Task<IActionResult> Details(int id)
         {
-           var post = await _postRepository.Posts.FirstOrDefaultAsync(p => p.PostId == id);
+           var post = await _postRepository.Posts.Include(p=>p.User).Include(p=>p.Comments).ThenInclude(p=>p.User).FirstOrDefaultAsync(p => p.PostId == id);
 
             return View(post);
         }
@@ -163,7 +165,40 @@ namespace StoreApp.Controllers
         }
 
 
+       [HttpPost]
+public async Task<IActionResult> AddComment(int PostId, string Url, string Text)
+{
+    if (User.Identity?.IsAuthenticated == true)
+    {
+        var userId = _userManager.GetUserId(User);
 
+        if (string.IsNullOrEmpty(userId))
+        {
+            return Unauthorized(); // Kullanıcı kimliği bulunamadıysa yetkisiz erişim.
+        }
+
+        var entity = new Comment
+        {
+            PostId = PostId,
+            Text = Text,
+            PublishedOn = DateTime.Now,
+            UserId = userId
+        };
+
+        try
+        {
+            _commentRepository.AddComment(entity);
+            return RedirectToAction("Details", new { id = PostId, url = Url });
+        }
+        catch (Exception ex)
+        {
+            // Hata loglama
+            ModelState.AddModelError("", "Yorum eklenirken bir hata oluştu.");
+        }
+    }
+
+    return RedirectToAction("Login", "Account"); // Kullanıcı oturum açmamışsa giriş sayfasına yönlendir.
+}
 
 
     }

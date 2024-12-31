@@ -20,6 +20,7 @@ namespace StoreApp.Models
         public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<Category> Categories { get; set; } 
+        public DbSet<Comment> Comments { get; set; } 
 
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -49,6 +50,16 @@ namespace StoreApp.Models
                         .WithMany()                  
                         .HasForeignKey(oi => oi.PostId);
 
+                builder.Entity<Comment>()
+                    .HasOne(c => c.Post)
+                    .WithMany(p => p.Comments) // Bir Post birden fazla yoruma sahip olabilir
+                    .HasForeignKey(c => c.PostId);
+
+                // Comment ile User arasındaki ilişki
+                builder.Entity<Comment>()
+                    .HasOne(c => c.User)
+                    .WithMany(u => u.Comments) // Bir User birden fazla yoruma sahip olabilir
+                    .HasForeignKey(c => c.UserId);
 
         }
 

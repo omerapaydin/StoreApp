@@ -11,5 +11,6 @@ namespace StoreApp.Entity
         public string? FullName { get; set; }
         public string? ImageFile { get; set; }
         public List<Post> Posts { get; set; } = new List<Post>();
+        public List<Comment> Comments { get; set; } = new List<Comment>();
     }
 }

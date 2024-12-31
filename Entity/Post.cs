@@ -18,6 +18,7 @@ namespace StoreApp.Entity
         public ApplicationUser User { get; set; }
         public int? CategoryId { get; set; } 
         public Category Category { get; set; }
+        public List<Comment> Comments { get; set; } = new List<Comment>();
 
     }
 }

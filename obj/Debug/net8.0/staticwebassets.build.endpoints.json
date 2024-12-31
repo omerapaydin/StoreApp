@@ -29,7 +29,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 29 Nov 2024 15:45:05 GMT"
+          "Value": "Tue, 31 Dec 2024 16:03:12 GMT"
         }
       ],
       "EndpointProperties": [
@@ -66,7 +66,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 29 Nov 2024 15:45:05 GMT"
+          "Value": "Tue, 31 Dec 2024 16:03:12 GMT"
         }
       ],
       "EndpointProperties": [
@@ -4667,6 +4667,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Sat, 07 Dec 2024 17:47:55 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aaOzSPVofV7cGlRvJwMLZUxCzdjdLeuWb7EEANsDvjI="
+        }
+      ]
+    },
+    {
+      "Route": "img/ce00e45b-ca1b-4371-b121-101cd1037a97.b7dfskoipr.jpg",
+      "AssetFile": "img/ce00e45b-ca1b-4371-b121-101cd1037a97.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "721442"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aaOzSPVofV7cGlRvJwMLZUxCzdjdLeuWb7EEANsDvjI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 15:43:51 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b7dfskoipr"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-aaOzSPVofV7cGlRvJwMLZUxCzdjdLeuWb7EEANsDvjI="
+        },
+        {
+          "Name": "label",
+          "Value": "img/ce00e45b-ca1b-4371-b121-101cd1037a97.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "img/ce00e45b-ca1b-4371-b121-101cd1037a97.jpg",
+      "AssetFile": "img/ce00e45b-ca1b-4371-b121-101cd1037a97.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "721442"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aaOzSPVofV7cGlRvJwMLZUxCzdjdLeuWb7EEANsDvjI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 15:43:51 GMT"
         }
       ],
       "EndpointProperties": [

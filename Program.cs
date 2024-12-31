@@ -39,6 +39,7 @@ builder.Services.Configure<IdentityOptions>( options =>{
 );
 
 builder.Services.AddScoped<IPostRepository,EfPostRepository>();
+builder.Services.AddScoped<ICommentRepository,EfCommentRepository>();
 builder.Services.AddScoped<Cart>();
 builder.Services.AddScoped<IOrderRepository,EfOrderRepository>();
 builder.Services.AddScoped<ICategoryRepository,EfCategoryRepository>();
