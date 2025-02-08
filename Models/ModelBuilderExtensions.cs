@@ -25,7 +25,7 @@ namespace StoreApp.Models
                 Email = "info@gmail.com",
                 ImageFile = "p1.jpg",
                 FullName = "Ömer Apaydın",
-                EmailConfirmed = true // E-posta doğrulamasını sağlıyoruz
+                EmailConfirmed = true 
             };
 
             user.PasswordHash = hasher.HashPassword(user, "User123!");

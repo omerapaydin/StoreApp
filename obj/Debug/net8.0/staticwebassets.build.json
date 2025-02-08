@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "f7HO3d0iXj9knsG8v8HVEeDz1338kWloDWIabW8pwCI=",
+  "Hash": "U1PYk4lxdFCcxx0Cb8CUU04bdCSII6DJxUa28dYWlSA=",
   "Source": "StoreApp",
   "BasePath": "_content/StoreApp",
   "Mode": "Default",
@@ -16,6 +16,27 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/css/login.css",
+      "SourceId": "StoreApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/",
+      "BasePath": "_content/StoreApp",
+      "RelativePath": "css/login#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5c06n08iei",
+      "Integrity": "Nb6gZpOFjyRS7AA/XfD8fsO/BlRZR0WD6W9xJPN9QlQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/login.css"
+    },
     {
       "Identity": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/css/main.css",
       "SourceId": "StoreApp",
@@ -1656,6 +1677,88 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "css/login.5c06n08iei.css",
+      "AssetFile": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/css/login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "574"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Nb6gZpOFjyRS7AA/XfD8fsO/BlRZR0WD6W9xJPN9QlQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Feb 2025 20:51:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5c06n08iei"
+        },
+        {
+          "Name": "label",
+          "Value": "css/login.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Nb6gZpOFjyRS7AA/XfD8fsO/BlRZR0WD6W9xJPN9QlQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/login.css",
+      "AssetFile": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/css/login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "574"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Nb6gZpOFjyRS7AA/XfD8fsO/BlRZR0WD6W9xJPN9QlQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Feb 2025 20:51:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Nb6gZpOFjyRS7AA/XfD8fsO/BlRZR0WD6W9xJPN9QlQ="
+        }
+      ]
+    },
     {
       "Route": "css/main.css",
       "AssetFile": "/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/wwwroot/css/main.css",
