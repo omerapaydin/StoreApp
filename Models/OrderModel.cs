@@ -19,5 +19,13 @@ namespace StoreApp.Models
         public string AddressLine { get; set; } = null!;
         [BindNever]
         public Cart? Cart { get; set; } 
+
+        public string? CartName { get; set; }
+        public string? CartNumber { get; set; }
+        public string? ExpirationMonth { get; set; }
+        public string? ExpirationYear { get; set; }
+        public string? Cvc { get; set; }
+
+
     }
 }

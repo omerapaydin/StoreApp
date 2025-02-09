@@ -26,11 +26,37 @@
                      <label asp-for="Email"></label>
                      <input asp-for="Email" class="form-control">
                 </div>
-            </div>
-            <div class="mb-3">
+                  <div class="mb-3">
                 <label asp-for="AddressLine"></label>
                 <textarea asp-for="AddressLine" class="form-control"></textarea>
             </div>
+            </div>
+            <h4 class="my-3">Ödeme Bilgileri</h4>
+            <div class="row">
+                <div class="col">
+                     <label asp-for="CartName"></label>
+                     <input asp-for="CartName" class="form-control">
+                </div>
+                <div class="col">
+                     <label asp-for="CartNumber"></label>
+                     <input asp-for="CartNumber" class="form-control">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                     <label asp-for="ExpirationMonth"></label>
+                     <input asp-for="ExpirationMonth" class="form-control">
+                </div>
+                <div class="col">
+                     <label asp-for="ExpirationYear"></label>
+                     <input asp-for="ExpirationYear" class="form-control">
+                </div>
+                <div class="col">
+                     <label asp-for="Cvc"></label>
+                     <input asp-for="Cvc" class="form-control">
+                </div>
+            </div>
+
             <button type="submit" class="mb-3 btn btn-warning">Submit</button>
         </form>
     </div>

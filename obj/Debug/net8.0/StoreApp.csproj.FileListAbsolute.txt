@@ -284,3 +284,4 @@
 /Users/omerapaydin/Desktop/E-Ticaret/StoreApp/bin/Debug/net8.0/Newtonsoft.Json.dll
 /Users/omerapaydin/Desktop/E-Ticaret/StoreApp/bin/Debug/net8.0/Newtonsoft.Json.Bson.dll
 /Users/omerapaydin/Desktop/E-Ticaret/StoreApp/bin/Debug/net8.0/System.Security.Permissions.dll
+/Users/omerapaydin/Desktop/E-Ticaret/StoreApp/bin/Debug/net8.0/Iyzipay.dll
