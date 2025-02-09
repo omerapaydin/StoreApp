@@ -65,13 +65,14 @@ public async Task<IActionResult> Checkout(OrderModel model)
 
         if (payment.Status == "success")
         {
-            return RedirectToAction("Completed", new { orderId = order.Id });
-        }
-
-        _orderRepository.AddOrder(order);
+            _orderRepository.AddOrder(order);
         cart.Clear();
         HttpContext.Session.SetJson("cart", cart);
         return RedirectToAction("Completed", new { orderId = order.Id });
+        }
+             model.Cart = cart;
+             return View(model);
+       
     }
 
     model.Cart = cart;
