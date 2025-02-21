@@ -114,7 +114,7 @@ public async Task<IActionResult> Create(CreateViewModel model, IFormFile? imageF
 
         if (result.Succeeded)
         {
-            var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                 var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                 var url = Url.Action("ConfirmEmail", "Account", new{user.Id,token});
 
                   

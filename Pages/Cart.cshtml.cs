@@ -38,19 +38,19 @@ namespace StoreApp.Pages
 
 
        public IActionResult OnPostRemove(int PostId)
-{
-    Carts = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+        {
+            Carts = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
 
-    var itemToRemove = Carts.Items.FirstOrDefault(p => p.Post.PostId == PostId);
+            var itemToRemove = Carts.Items.FirstOrDefault(p => p.Post.PostId == PostId);
 
-    if (itemToRemove != null)
-    {
-        Carts.RemoveItem(itemToRemove.Post);
-        HttpContext.Session.SetJson("cart", Carts);
-    }
+            if (itemToRemove != null)
+            {
+                Carts.RemoveItem(itemToRemove.Post);
+                HttpContext.Session.SetJson("cart", Carts);
+            }
 
-    return RedirectToPage("/Cart");
-}
+            return RedirectToPage("/Cart");
+        }
 
         }
     }

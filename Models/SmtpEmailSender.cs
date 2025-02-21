@@ -9,7 +9,7 @@ namespace StoreApp.Models
 {
     public class SmtpEmailSender : IEmailSender
     {
-          private string? _host;
+        private string? _host;
         private int _port;
         private bool _enableSSL;
         private string? _username;

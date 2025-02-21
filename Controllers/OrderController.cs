@@ -86,104 +86,104 @@ public async Task<IActionResult> Checkout(OrderModel model)
         }
 
        private async Task<Payment> ProcessPayment(OrderModel model)
-{
-    return await Task.Run(async () =>
-    {
-        Options options = new Options
         {
-            ApiKey = "sandbox-7Lwlm9Cfs4VYGxrsfof68Pr10OgnMxLB",
-            SecretKey = "sandbox-qdRGIKew6KivQhOEjGEYZKkDHV3G7Y6B",
-            BaseUrl = "https://sandbox-api.iyzipay.com"
-        };
-
-        CreatePaymentRequest request = new CreatePaymentRequest
-        {
-            Locale = Locale.TR.ToString(),
-            ConversationId = new Random().Next(111111111,999999999).ToString(),
-            Price = model?.Cart?.CalculateTotal().ToString(),
-            PaidPrice =  model?.Cart?.CalculateTotal().ToString(),
-            Currency = Currency.TRY.ToString(),
-            Installment = 1,
-            BasketId = "B67832",
-            PaymentChannel = PaymentChannel.WEB.ToString(),
-            PaymentGroup = PaymentGroup.PRODUCT.ToString()
-        };
-
-        PaymentCard paymentCard = new PaymentCard
-        {
-            CardHolderName = model?.CartName,
-            CardNumber = model?.CartNumber,
-            ExpireMonth = model?.ExpirationMonth,
-            ExpireYear = model?.ExpirationYear,
-            Cvc = model?.Cvc,
-            RegisterCard = 0
-        };
-        request.PaymentCard = paymentCard;
-
-        Buyer buyer = new Buyer
-        {
-            Id = "BY789",
-            Name = "Ömer",
-            Surname = "Apaydın",
-            GsmNumber = "+905350000000",
-            Email = "email@email.com",
-            IdentityNumber = "74300864791",
-            LastLoginDate = "2015-10-05 12:43:35",
-            RegistrationDate = "2013-04-21 15:12:09",
-            RegistrationAddress = "Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1",
-            Ip = "85.34.78.112",
-            City = "Istanbul",
-            Country = "Turkey",
-            ZipCode = "34732"
-        };
-        request.Buyer = buyer;
-
-        Address shippingAddress = new Address
-        {
-            ContactName = "Jane Doe",
-            City = "Istanbul",
-            Country = "Turkey",
-            Description = "Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1",
-            ZipCode = "34742"
-        };
-        request.ShippingAddress = shippingAddress;
-
-        Address billingAddress = new Address
-        {
-            ContactName = "Jane Doe",
-            City = "Istanbul",
-            Country = "Turkey",
-            Description = "Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1",
-            ZipCode = "34742"
-        };
-        request.BillingAddress = billingAddress;
-
-        List<BasketItem> basketItems = new List<BasketItem>();
-        
-
-            foreach (var item in model?.Cart?.Items ?? Enumerable.Empty<CartItem>())
+            return await Task.Run(async () =>
             {
-                BasketItem firstbasketItem = new BasketItem();
+                Options options = new Options
+                {
+                    ApiKey = "sandbox-7Lwlm9Cfs4VYGxrsfof68Pr10OgnMxLB",
+                    SecretKey = "sandbox-qdRGIKew6KivQhOEjGEYZKkDHV3G7Y6B",
+                    BaseUrl = "https://sandbox-api.iyzipay.com"
+                };
+
+                CreatePaymentRequest request = new CreatePaymentRequest
+                {
+                    Locale = Locale.TR.ToString(),
+                    ConversationId = new Random().Next(111111111,999999999).ToString(),
+                    Price = model?.Cart?.CalculateTotal().ToString(),
+                    PaidPrice =  model?.Cart?.CalculateTotal().ToString(),
+                    Currency = Currency.TRY.ToString(),
+                    Installment = 1,
+                    BasketId = "B67832",
+                    PaymentChannel = PaymentChannel.WEB.ToString(),
+                    PaymentGroup = PaymentGroup.PRODUCT.ToString()
+                };
+
+                PaymentCard paymentCard = new PaymentCard
+                {
+                    CardHolderName = model?.CartName,
+                    CardNumber = model?.CartNumber,
+                    ExpireMonth = model?.ExpirationMonth,
+                    ExpireYear = model?.ExpirationYear,
+                    Cvc = model?.Cvc,
+                    RegisterCard = 0
+                };
+                request.PaymentCard = paymentCard;
+
+                Buyer buyer = new Buyer
+                {
+                    Id = "BY789",
+                    Name = "Ömer",
+                    Surname = "Apaydın",
+                    GsmNumber = "+905350000000",
+                    Email = "email@email.com",
+                    IdentityNumber = "74300864791",
+                    LastLoginDate = "2015-10-05 12:43:35",
+                    RegistrationDate = "2013-04-21 15:12:09",
+                    RegistrationAddress = "Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1",
+                    Ip = "85.34.78.112",
+                    City = "Istanbul",
+                    Country = "Turkey",
+                    ZipCode = "34732"
+                };
+                request.Buyer = buyer;
+
+                Address shippingAddress = new Address
+                {
+                    ContactName = "Jane Doe",
+                    City = "Istanbul",
+                    Country = "Turkey",
+                    Description = "Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1",
+                    ZipCode = "34742"
+                };
+                request.ShippingAddress = shippingAddress;
+
+                Address billingAddress = new Address
+                {
+                    ContactName = "Jane Doe",
+                    City = "Istanbul",
+                    Country = "Turkey",
+                    Description = "Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1",
+                    ZipCode = "34742"
+                };
+                request.BillingAddress = billingAddress;
+
+                List<BasketItem> basketItems = new List<BasketItem>();
                 
-                    firstbasketItem.Id = item.Post.PostId.ToString();
-                    firstbasketItem.Name = item.Post.Title;
-                    firstbasketItem.Category1 = "Elektronik";
-                    firstbasketItem.ItemType = BasketItemType.PHYSICAL.ToString();
-                    firstbasketItem.Price = item.Post.Price.ToString();
+
+                    foreach (var item in model?.Cart?.Items ?? Enumerable.Empty<CartItem>())
+                    {
+                        BasketItem firstbasketItem = new BasketItem();
+                        
+                            firstbasketItem.Id = item.Post.PostId.ToString();
+                            firstbasketItem.Name = item.Post.Title;
+                            firstbasketItem.Category1 = "Elektronik";
+                            firstbasketItem.ItemType = BasketItemType.PHYSICAL.ToString();
+                            firstbasketItem.Price = item.Post.Price.ToString();
+                        
+                            basketItems.Add(firstbasketItem);
+                    }
+
+
                 
-                    basketItems.Add(firstbasketItem);
-            }
+                
+                
+                request.BasketItems = basketItems;
 
-
-           
-           
-        
-        request.BasketItems = basketItems;
-
-        Payment payment =await Payment.Create(request, options);
-        return payment;
-    });
-}
+                Payment payment =await Payment.Create(request, options);
+                return payment;
+            });
+        }
        
 
     }

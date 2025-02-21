@@ -8,6 +8,7 @@ using StoreApp.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<Cart>();
+
 builder.Services.AddScoped<IEmailSender, SmtpEmailSender>(i =>
     new SmtpEmailSender(
         builder.Configuration["EmailSender:Host"],
