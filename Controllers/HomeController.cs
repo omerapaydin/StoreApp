@@ -138,10 +138,9 @@ namespace StoreApp.Controllers
                     }
                     else
                     {
-                        // Eğer dönüşüm başarısız olursa, null değer atayabilirsiniz veya hata yönetimi yapabilirsiniz
+                       
                         post.Price = null;
-                        // veya
-                        // Console.WriteLine("Geçersiz fiyat değeri");
+                       
                     }
 
                 _postRepository.AddPost(post);

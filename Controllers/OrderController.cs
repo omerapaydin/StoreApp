@@ -91,8 +91,8 @@ public async Task<IActionResult> Checkout(OrderModel model)
             {
                 Options options = new Options
                 {
-                    ApiKey = "sandbox-7Lwlm9Cfs4VYGxrsfof68Pr10OgnMxLB",
-                    SecretKey = "sandbox-qdRGIKew6KivQhOEjGEYZKkDHV3G7Y6B",
+                    ApiKey = "<api_key>",
+                    SecretKey = "<api_secret>",
                     BaseUrl = "https://sandbox-api.iyzipay.com"
                 };
 
